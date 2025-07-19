@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dummy</title>
+  <!-- css読み込み -->
+  <link rel="stylesheet" href="sass/reset.css">
+  <link rel="stylesheet" href="sass/style.css">
+
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+<header class="header">
+  <a href="index.html" class="header__logo">
+    <img src="images/dummy-logo.png" alt="企業ロゴダミー">
+  </a>
+  <nav class="header__nav">
+    <ul class="header__nav__list">
+      <li><a href="company.html">会社概要</a></li>
+      <li><a href="#">サービス <!-- リンクは仮です --> </a></li>
+      <li><a href="#">助成金 <!-- リンクは仮です --> </a></li>
+      <li><a href="#">ニュース <!-- リンクは仮です --> </a></li>
+      <li><a href="contact.html">お問い合わせ <!-- リンクは仮です --> </a></li>
+    </ul>
+    <div class="header__nav-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>    
+  </nav>
+</header>
+<main>
+  <section class="contact-page">
+    <div class="wrapper" data-aos="fade-up">
+      <div class="page__ttl">
+        <h1>お問い合わせ</h1>
+        <span>CONTACT</span>
+      </div>
+      <div class="contact-page__area">
+        <h3>お見積りや質問等でも、お気軽にお問い合わせ下さい。</h3>
+        <ul class="contact-page__area__company-info">
+          <li>
+            <h4>Address</h4>
+            <span>沖縄県ああああ市1-1-1</span>
+          </li>
+          <li>
+            <h4>Contact Information</h4>
+            <span>Phone: 090-0000-0000<br>Email: dummy@gmail.com</span>
+          </li>
+        </ul>
+        <form action="#" class="form">
+          <div class="form__list">
+            <label for="name">お名前<span>必須</span></label>
+            <input type="text" name="name" placeholder="例：山田 太郎" required>
+          </div>
+          <div class="form__list">
+            <label for="email">メールアドレス<span>必須</span></label>
+            <input type="text" name="email" placeholder="例：example@gmail.com" required>
+          </div>
+          <div class="form__list">
+            <label for="tel">電話番号<span>必須</span></label>
+            <input type="text" name="tel" placeholder="例：090-0000-0000" required>
+          </div>
+          <div class="form__list">
+            <label for="name">お問い合わせ内容<span>必須</span></label>
+            <textarea name="free" rows="10" cols="30" placeholder="自由に意見を記述してください" required></textarea>
+          </div>
+          <div class="form__list">
+            <label for="checkbox">
+              <input type="checkbox" name="checkbox" required>必須項目を全て記入しました。
+            </label>
+          </div>
+          <div class="form__submit">
+            <input type="submit" value="送信" class="form__submit__btn">
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <ul class="footer__list">
+    <li><a href="#">プライバシーポリシー</a></li>
+    <li><a href="#">お問い合わせ</a></li>
+  </ul>
+  <p> &comp; 2025 ダミーサイト</p>
+</footer>
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- aos -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init( {
+    //実行のスピード
+    delay: 100,
+    //アニメーションスピード
+    duration: 1200,
+    //一回きり（都度動かしたい時は'false'）
+    once: true
+  });
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

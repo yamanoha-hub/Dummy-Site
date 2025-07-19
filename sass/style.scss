@@ -21,7 +21,7 @@
   transition: 0.5s;
 
 
-  &--logo {
+  &__logo {
     margin: 16px;
     img {
       width: 128px;
@@ -32,7 +32,7 @@
     }
   }
 
-  &--nav {
+  &__nav {
     margin-right: 16px;
     &__list {
       display: flex;
@@ -47,14 +47,14 @@
   // スクロール後のheader変化
   &.header--bg {
     transition: 0.5s; background-color: #333;
-    .header--nav__list {
+    .header__nav__list {
       a {
         transition: 0.5s; color: #fff;
       }
     }
     @include media(s) {
       @include hamburger;
-      .header--nav__list {
+      .header__nav__list {
       a {
         transition: 0.5s; color: $font-Color;
       }
@@ -68,7 +68,7 @@
   height: 720px;
   opacity: 0.8;
 
-  &--img {
+  &__img {
     width: 100%;
     height: 100%;
     img {
@@ -93,7 +93,7 @@
   }
   @include media(s) {
     height: 100vh;
-    &--img {
+    &__img {
       img {
         height: 100vh;
       }
@@ -113,7 +113,7 @@
 .company {
   padding-top: 96px;
   padding-bottom: 96px;
-  .section--ttl {
+  .section__ttl {
     padding-top: 100px;
     padding-bottom: 50px;
     @include section--ttl;
@@ -126,12 +126,12 @@
     padding-top: 32px;
     font-size: 18px
   }
-  &--btn {
+  &__btn {
     @include btn;
   }
 
   @include media(m) {
-    .section--ttl {
+    .section__ttl {
       padding-top: 80px;
       padding-bottom: 40px;
     }
@@ -139,7 +139,7 @@
   @include media(s) {
     padding-top: 72px;
     padding-bottom: 72px;
-    .section--ttl {
+    .section__ttl {
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -157,7 +157,7 @@
   padding-top: 128px;
   padding-bottom: 128px;
   background-color: $bg-color;
-  .section--ttl {
+  .section__ttl {
     @include section--ttl;
   }
   &__content {
@@ -189,7 +189,7 @@
       }
     }
   }
-  &--btn {
+  &__btn {
     @include btn;
   }
   @include media(m) {
@@ -251,7 +251,7 @@
 .news {
   padding-top: 96px;
   padding-bottom: 96px;
-  .section--ttl {
+  .section__ttl {
     @include section--ttl;
   }
   &__area {
@@ -277,7 +277,7 @@
         object-fit: cover;
         object-position: 50% 50%;
       }
-      &--content {
+      &__content {
         display: flex;
         flex-direction: column;
         h3 {
@@ -302,7 +302,7 @@
       }
     }
   }
-  &--btn {
+  &__btn {
     @include btn;
   }
 
@@ -312,28 +312,28 @@
     &__area {
       padding-top: 24px;
       padding-bottom: 60px;
-    &__list {
-      display: flex;
-      padding: 14px 14px 7px;
-      gap: 14px;
-      img {
+      &__list {
+        display: flex;
+        padding: 14px 14px 7px;
+        gap: 14px;
+        img {
         width: 5em;
         height: 5em;
-      }
-      &--content {
-        justify-content: space-between;
-        h3 {
-          font-size: 21px;
         }
-        p {
-          font-size: 14px;
-        }
-        time {
-          font-size: 7px;
+        &__content {
+          justify-content: space-between;
+          h3 {
+            font-size: 21px;
+          }
+          p {
+            font-size: 14px;
+          }
+          time {
+            font-size: 7px;
+          }
         }
       }
     }
-  }
   }
 }
 
@@ -344,18 +344,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  &--ttl {
+  &__ttl {
     text-align: center;
     font-size: 48px;
     color: #fff;
     margin-bottom: 19.2px;
   }
-  &--btn {
+  &__btn {
     @include btn;
   }
   @include media(s) {
     height: 320px;
-    &--ttl {
+    &__ttl {
       font-size: 36px;
       margin-bottom: 29px;
     }
@@ -400,7 +400,7 @@
 .about--us {
   padding-top: 80px;
 
-  .page--ttl {
+  .page__ttl {
     @include page--ttl;
   }
   &__content {
@@ -428,14 +428,14 @@
   background-color: $bg-color;
   padding-top: 128px;
   padding-bottom: 128px;
-  &--ttl {
+  &__ttl {
     text-align: center;
     font-size: 32px;
     margin-bottom: 64px;
   }
 
   &__area {
-    width: 1000px;
+    max-width: 1000px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -453,7 +453,7 @@
 
   @include media(s) {
     padding: 72px 5%;
-    &--ttl {
+    &__ttl {
       font-size: 24px;
       margin-bottom: 48px;
     }
@@ -469,13 +469,12 @@
     }
   }
 
-
 }
 
-.company--info {
+.company-info {
   padding-top: 96px;
   padding-bottom: 96px;
-  &--ttl {
+  &__ttl {
     font-size: 32px;
     margin-bottom: 64px;
     text-align: center;
@@ -510,7 +509,7 @@
   @include media(s) {
     padding-top: 72px;
     padding-bottom: 60px;
-    &--ttl {
+    &__ttl {
       margin-bottom: 48px;
       text-align: center;
     }
@@ -532,7 +531,7 @@
 
 .map {
   background-color: $bg-color;
-  &--ttl {
+  &__ttl {
     text-align: center;
     padding-top: 128px;
     padding-bottom: 64px;
@@ -546,12 +545,188 @@
     }
   }
   @include media(s) {
-    &--ttl {
+    &__ttl {
       padding: 72px 12px 48px;
       font-size: 32px;
     }
   }
 }
+
+// contact.html
+.contact-page {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .page__ttl {
+    @include page--ttl;
+  }
+  &__area {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      text-align: center;
+      white-space: pre-wrap;
+    }
+    &__company-info {
+      padding: 32px 0;
+      display: flex;
+      justify-content: space-between;
+      li {
+        display: flex;
+        font-size: 18px;
+        margin-bottom: auto;
+        h4 {
+          border-right: .05em solid #d3d3d3;
+          padding: .1em 1em;
+          color: $sv-color;
+        }
+        span {
+          padding: .1em 1em;
+        }
+      }
+    }
+    .form {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      &__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+        margin: 0 auto;
+        border-top: 0.5px solid #d3d3d3;
+        label {
+          flex-basis: 33%;
+          margin: auto 0;
+          span {
+            padding: 5px;
+            color: red;
+          }
+        }
+        input, textarea {
+          flex-basis: 66%;
+          padding: 6.4px;
+          border: 0.6px solid #d3d3d3;
+          border-radius: 5px;
+          border-width: .05em;
+          font-size: 12.8px;
+        }
+        &:nth-last-child(2) {
+          input[type=checkbox] {
+            margin-right: 10px;
+            vertical-align: middle;
+          }
+        }
+      }
+      &__submit {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        &__btn {
+          appearance: none;
+          width: 50%;
+          padding: 7px 25px;
+
+          border: none;
+          border-radius: 5px;
+
+          color: #fff;
+          font-size: 16px;
+          font-weight: bold;
+          background-color: $sv-color;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  @include media(m) {
+    &__area {
+      h3 {
+        font-size: 18px;
+      }
+      &__company-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        margin: 32px 0 64px;
+
+        li {
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h4 {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(s) {
+    padding-bottom: 105px;
+    &__area {
+      h3 {
+        font-size: 13.5px;
+      }
+      &__company-info {
+        padding: 24px 0;
+        margin: 0;
+        gap: 6px;
+        li {
+          font-size: 14px;
+          margin-bottom: auto;
+          h4 {
+            border-right: 0;
+            padding: .1em 1em;
+            padding-bottom: 7px;
+            color: $sv-color;
+          }
+          span {
+            padding: .1em 1em;
+          }
+        }
+      }
+
+      .form {
+        font-size: 13.5px;
+        padding: 12px 0;
+        &__list {
+          flex-direction: column;
+          border-top: none;
+          padding: 0;
+          label {
+            padding: .5em 0;
+          }
+          input, textarea {
+            font-size: 16px;
+            padding: 8px;
+            border: 1px solid #d3d3d3;
+          }
+          &:nth-last-child(2) {
+            border-top: 0.5px solid #d3d3d3;
+            padding: 12px 0;
+            margin: 12px 0;
+            input[type=checkbox] {
+              font-size: 12px;
+              // vertical-align: middle;
+            }
+          }
+        }
+        &__submit {
+          margin-top: 0;
+          &__btn {
+            width: 100%;
+            font-size: 12px;
+            padding: .5em 0;
+          }
+        }
+      }
+    }
+  } 
+}
+
 
 // @include media(s) {
 

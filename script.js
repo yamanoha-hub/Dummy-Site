@@ -1,7 +1,7 @@
 $(function() {
-  $('.header--nav__hamburger').click(function() {
+  $('.header__nav__hamburger').click(function() {
     // メニューの開閉状態を切り替える
-    $('.header--nav').toggleClass('open');
+    $('.header__nav').toggleClass('open');
 
     // ハンバーガーボタンのアクティブクラスを切り替えて三本線をバツにする
     $(this).toggleClass('active');
@@ -18,6 +18,9 @@ $(function() {
       $(".header").removeClass("header--bg");
     }
   });
+  // メニュー開閉時に付け外し
+  // $('body').toggleClass('no-scroll');
+
 
 });
 
